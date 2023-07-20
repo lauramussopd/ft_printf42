@@ -6,7 +6,7 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 17:59:03 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/07/20 20:00:49 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/20 20:13:31 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,15 @@ int	ft_printf(char const *str, ...) //restituisce un int, -1 se errore
 	{
 		if(str[i] == '%')
 		{
-			counter = ft_format
+			counter = ft_format(s[i+1], args)
+				i++;
+		}
+		else
+		{
+			counter = write(1, s[i], 1);
 		}
 	}
+}
 
 
 
