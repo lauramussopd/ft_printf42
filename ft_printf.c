@@ -6,7 +6,7 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 17:59:03 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/07/22 17:29:35 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/22 18:31:20 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,13 @@ int	ft_printf(char const *str, ...) //restituisce un int, -1 se errore
 
 int main()
 {
-	char r = 'r';
-	ft_printf("La parola con il mio printf e: %c\n", r);
-	//printf("la parola con la funzione originale e: %s\n", str);
+	char *str = "ciaooo";
+	char c = 'H';
+	//int	num = 12345;
+
+	ft_printf("Imprimi una string: %s\n", str);
+	ft_printf("Imprimi un carattere: %c\n", c);
+	ft_printf ("Print a percentage sign: %%\n");
+
+
 }

@@ -6,7 +6,7 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 20:14:33 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/07/22 17:27:51 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/22 18:48:45 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h" 
@@ -26,5 +26,7 @@ int	ft_tipo(char c, va_list args)
 		len = ft_putchar(va_arg(args, int));
 		return (len);
 	}
+	else if (c =='%')
+		len = ft_putpercentage();
 	return(len);	
 }
