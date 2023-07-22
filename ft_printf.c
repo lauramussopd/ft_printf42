@@ -6,15 +6,15 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 17:59:03 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/07/22 13:39:12 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/22 16:55:41 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdarg.h>
+#include "ft_printf.h" 
 
-#include <unistd.h>
+/*
 
-int ft_putstr(char *s)
+   int ft_putstr(char *s)
 {
 	int i = 0;
 	while(s[i])
@@ -38,6 +38,7 @@ int	ft_tipo(char c, va_list args)
 	//if (c == 'd')
 }
 
+*/
 
 int	ft_printf(char const *str, ...) //restituisce un int, -1 se errore
 {
@@ -56,26 +57,23 @@ int	ft_printf(char const *str, ...) //restituisce un int, -1 se errore
 	{
 		if(str[i] == '%')
 		{
-			counter = ft_tipo(str[i+1], args);
-				i++;
+			counter += ft_tipo(str[i+1], args);
+			i++;
 		}
 		else
 		{
-			counter = write(1, &str[i], 1);
+			counter += write(1, &str[i], 1);
+	
 		}
-		return(0);
+		i++;
 	}
-
-
-
-
-
 	va_end(args);
 	return(counter);
 }
 
 int main()
 {
-	char *str = "hlahola";
-	ft_printf("il numero e: %s", str);
+	char *str = "girgia";
+	ft_printf("La parola con il mio printf e: %s\n", str);
+	//printf("la parola con la funzione originale e: %s\n", str);
 }
