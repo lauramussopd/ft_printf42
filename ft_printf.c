@@ -6,7 +6,7 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 17:59:03 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/07/22 18:31:20 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/25 16:59:07 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,17 @@ int	ft_printf(char const *str, ...) //restituisce un int, -1 se errore
 	va_end(args);
 	return(counter);
 }
-
+/*
 int main()
 {
 	char *str = "ciaooo";
 	char c = 'H';
-	//int	num = 12345;
+	int	num = 12345;
 
 	ft_printf("Imprimi una string: %s\n", str);
 	ft_printf("Imprimi un carattere: %c\n", c);
 	ft_printf ("Print a percentage sign: %%\n");
+	ft_printf ("scrivi un numero: %d\n", num);
 
 
-}
+}*/

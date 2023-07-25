@@ -6,7 +6,7 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 11:55:34 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/07/22 15:57:28 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/25 17:36:30 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 int ft_putstr(char *s)
 {
 	int i = 0;
+	if(s == NULL)
+	{
+		write(1,"(null)",6);
+		return (6);
+	}
 	while(s[i])
 	{
 		write(1, &s[i], 1);
