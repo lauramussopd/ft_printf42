@@ -6,7 +6,7 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 16:15:36 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/07/25 16:53:54 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/25 18:20:25 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	ft_tipo(char c, va_list args);
 int	ft_putchar(char c);
 int ft_putpercentage(void);
 int	ft_putnbr(int n);
+int ft_putuns(unsigned int b);
 int	ft_printf(const char *str, ...);
 
 #endif //FT_PRINTF_H

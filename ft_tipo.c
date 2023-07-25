@@ -6,7 +6,7 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 20:14:33 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/07/25 16:53:00 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/07/25 18:21:13 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h" 
@@ -29,6 +29,11 @@ int	ft_tipo(char c, va_list args)
 	else if ((c == 'd') || ( c == 'i'))
 	{
 		len = ft_putnbr(va_arg(args, int));
+		return (len);
+	}
+	else if (c == 'u')
+	{
+		len = ft_putuns(va_arg(args, unsigned int));
 		return (len);
 	}
 	else if (c =='%')

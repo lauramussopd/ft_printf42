@@ -6,13 +6,13 @@
 #    By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/19 19:44:49 by laurmuss          #+#    #+#              #
-#    Updated: 2023/07/25 17:41:17 by laurmuss         ###   ########.fr        #
+#    Updated: 2023/07/25 18:22:11 by laurmuss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libftprintf.a 
 HEADER	= ft_printf.h
-SRCS	= ft_printf.c ft_tipo.c ft_putstr.c ft_putchar.c ft_putnbr.c ft_putpercentage.c
+SRCS	= ft_printf.c ft_tipo.c ft_putstr.c ft_putchar.c ft_putnbr.c ft_putpercentage.c ft_putuns.c
 OBJS	= $(SRCS:.c=.o) 
 DEPS	= $(SRCS:.c=.d)
 CC		= gcc
