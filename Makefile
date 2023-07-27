@@ -12,11 +12,11 @@
 
 NAME	= libftprintf.a 
 HEADER	= ft_printf.h
-SRCS	= ft_printf.c ft_tipo.c ft_putstr.c ft_putchar.c ft_putnbr.c ft_putpercentage.c ft_putuns.c ft_count_hex.c ft_puthex.c
+SRCS	= ft_printf.c ft_tipo.c ft_putstr.c ft_putchar.c ft_putnbr.c ft_putpercentage.c ft_putuns.c ft_puthex.c
 OBJS	= $(SRCS:.c=.o) 
 DEPS	= $(SRCS:.c=.d)
 CC		= gcc
-CFLAGS	= -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra -g
 RM		= rm -f 
 AR		= ar crs # create, replace, add and index indice all'archvio (senza doverlo digitare ogni volta)
 
