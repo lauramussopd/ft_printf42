@@ -42,17 +42,19 @@ int	ft_printf(char const *str, ...) //restituisce un int, -1 se errore
 	va_end(args);
 	return(counter);
 }
-/*
+
 int main()
 {
 	char *str = "ciaooo";
 	char c = 'H';
 	int	num = 12345;
+	long int hex = 851156164;
 
 	ft_printf("Imprimi una string: %s\n", str);
 	ft_printf("Imprimi un carattere: %c\n", c);
 	ft_printf ("Print a percentage sign: %%\n");
 	ft_printf ("scrivi un numero: %d\n", num);
+	ft_printf ("scrivi un numero hexadecimal: %X\n", hex);
 
 
-}*/
+}

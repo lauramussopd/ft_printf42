@@ -32,17 +32,6 @@ int ft_count_digits(int b)
 	}
 	return (res);
 }
-/*
-char	*ft_itoa(int n)
-{
-	char *result;
-	int len;
-	int mod;
-
-	mod = 0;
-	len = ft_count_digits(n);
-	resut = (char *)malloc(size of(char) * (len + 
-	*/
 
 int		ft_putnbr(int n)
 {

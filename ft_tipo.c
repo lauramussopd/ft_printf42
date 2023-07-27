@@ -36,6 +36,11 @@ int	ft_tipo(char c, va_list args)
 		len = ft_putuns(va_arg(args, unsigned int));
 		return (len);
 	}
+	else if (c == 'X')
+	{
+		len = ft_puthex(va_arg(args, unsigned int));
+		return (len);
+	}
 	else if (c =='%')
 		len = ft_putpercentage();
 	return(len);	
