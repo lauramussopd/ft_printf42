@@ -27,10 +27,10 @@ int	ft_putchar(char c);
 int ft_putpercentage(void);
 int	ft_putnbr(int n);
 int ft_putuns(unsigned int b);
-int	ft_puthex(unsigned int n);
+int	ft_puthex(unsigned long long n);
 int	ft_puthex_maius(unsigned int n);
-int ft_count_hex(unsigned int b);
-//int ft_putptr(void *p)
+int ft_count_hex(unsigned long long b);
+int ft_putptr(unsigned long long p);
 int	ft_printf(const char *str, ...);
 
 #endif //FT_PRINTF_H

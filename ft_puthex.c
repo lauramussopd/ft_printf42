@@ -1,11 +1,11 @@
 #include "ft_printf.h"
 
-int ft_count_hex(unsigned int b)
+int ft_count_hex(unsigned long long b)
 {
-	unsigned int	res;
-	long int	     num;
+	unsigned long long	res;
+	unsigned long long 	     num;
 
-	num = (unsigned int)b;
+	num = (unsigned long long)b;
 	res = 0;
 	if(b == 0)
 		return (1);
@@ -17,7 +17,7 @@ int ft_count_hex(unsigned int b)
 	return (res);
 }
 
-int		ft_puthex(unsigned int num)
+int		ft_puthex(unsigned long long num)
 {
 	int				rtn;
 

@@ -12,7 +12,7 @@
 
 NAME	= libftprintf.a 
 HEADER	= ft_printf.h
-SRCS	= ft_printf.c ft_tipo.c ft_putstr.c ft_putchar.c ft_putnbr.c ft_putpercentage.c ft_putuns.c ft_puthex_maius.c ft_puthex.c 
+SRCS	= ft_printf.c ft_tipo.c ft_putstr.c ft_putchar.c ft_putnbr.c ft_putpercentage.c ft_putuns.c ft_puthex_maius.c ft_puthex.c ft_putptr.c
 OBJS	= $(SRCS:.c=.o) 
 DEPS	= $(SRCS:.c=.d)
 CC		= gcc

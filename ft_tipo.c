@@ -19,7 +19,7 @@ int	ft_tipo(char c, va_list args)
 	} 
 	else if (c == 'p')
 	{
-		return (ft_putstr(va_arg(args, char *)));
+		return (ft_putptr(va_arg(args, unsigned long long)));
 	} 
 	else if (c == 'c')
 	{
