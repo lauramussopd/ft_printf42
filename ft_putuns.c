@@ -31,7 +31,10 @@ int		ft_putuns(unsigned int n)
 
 	rtn = ft_count_uns(n);
 	if (n < 10)
-		ft_putchar(n + '0');
+	{
+		if (ft_putchar(n + '0') == -1)
+			return (-1);
+	}
 	else
 	{
 		ft_putnbr(n / 10);

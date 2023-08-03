@@ -17,6 +17,7 @@ int	ft_printf(char const *str, ...) //restituisce un int, -1 se errore
 	va_list args; //where our arguments are gonna be stored
 	int counter;
 	int i;
+	int num;
 
 	if(str == NULL)
 		return (0);
@@ -29,26 +30,37 @@ int	ft_printf(char const *str, ...) //restituisce un int, -1 se errore
 	{
 		if(str[i] == '%')
 		{
-			counter += ft_tipo(str[i+1], args);
+			num = ft_tipo(str[i+1], args);
+			if (num == -1)
+				return (-1);
+			else {
+				counter += num;
+			//counter += ft_tipo(str[i+1], args);
+		//if (counter == -1)
+			//return (-1);
 			i++;
+			}
 		}
 		else
 		{
 			counter += write(1, &str[i], 1);
-	
+			if (counter == -1)
+				return (-1);
 		}
 		i++;
 	}
 	va_end(args);
 	return(counter);
 }
-
+/*
 int main()
 {
 	char *str = "ciaooo";
 	char c = 'H';
 	int	num = 12345;
+	int	= 
 	unsigned int hex = 4294967295;
+	unsigned int hex_maius = 429495;
 	int i;
 	int j;
 
@@ -56,9 +68,13 @@ int main()
 	ft_printf("Imprimi un carattere: %c\n", c);
 	ft_printf ("Print a percentage sign: %%\n");
 	ft_printf ("scrivi un numero: %d\n", num);
+	ft_printf ("scrivi un hexadecimal maiuscolo%X\n", hex_maius);
+	ft_printf ("scrivi un hexadecimal minuscolo%X\n", hex);
 	i = ft_printf ("%X\n", hex);
 	j = printf ("%X\n", hex);
 	printf ("laura %i original %i\n", i, j);
 
 }
+*/
+
 

@@ -16,5 +16,7 @@ int ft_putpercentage(void)
 {
 	int i;
 	i  = write(1, "%", 1);
+	if (i == -1)
+		return (-1);
 	return(i);
 }

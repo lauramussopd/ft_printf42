@@ -26,15 +26,22 @@ int		ft_puthex(unsigned int num)
 	if (num < 16)
     { 
         if (num < 10)
-		    ft_putchar(num + '0');
+		{
+			if (ft_putchar(num + '0') == -1)
+				return (-1);
+		}
         else
-            ft_putchar(num - 10 + 'a');
+		{
+			if (ft_putchar(num - 10 + 'a') == -1)
+				return (-1);
+		}
     }
 	else
 	{
-		ft_puthex(num / 16);        
-        ft_puthex(num % 16);
-
+		if (ft_puthex(num / 16) == -1)
+				return (-1);      
+		if (ft_puthex(num % 16) == -1)
+				return (-1);  
 	}
 	return (rtn);
 }

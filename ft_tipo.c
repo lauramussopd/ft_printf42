@@ -13,35 +13,36 @@
 
 int	ft_tipo(char c, va_list args)
 {
-	int len;
-	
-	len = 0;
 	if (c == 's')
 	{
-		len = ft_putstr(va_arg(args, char *));
-		return (len);
+		return (ft_putstr(va_arg(args, char *)));
+	} 
+	else if (c == 'p')
+	{
+		return (ft_putstr(va_arg(args, char *)));
 	} 
 	else if (c == 'c')
 	{
-		len = ft_putchar(va_arg(args, int));
-		return (len);
+		return ft_putchar(va_arg(args, int));
+
 	}
 	else if ((c == 'd') || ( c == 'i'))
 	{
-		len = ft_putnbr(va_arg(args, int));
-		return (len);
+		return ft_putnbr(va_arg(args, int));
 	}
 	else if (c == 'u')
 	{
-		len = ft_putuns(va_arg(args, unsigned int));
-		return (len);
+		return ft_putuns(va_arg(args, unsigned int));
+	}
+	else if (c == 'x')
+	{
+		return ft_puthex(va_arg(args, unsigned int));
 	}
 	else if (c == 'X')
 	{
-		len = ft_puthex(va_arg(args, unsigned int));
-		return (len);
+		return ft_puthex_maius(va_arg(args, unsigned int));
 	}
 	else if (c =='%')
-		len = ft_putpercentage();
-	return(len);	
+	return ft_putpercentage();
+	return (0);	
 }

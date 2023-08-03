@@ -17,12 +17,14 @@ int ft_putstr(char *s)
 	int i = 0;
 	if(s == NULL)
 	{
-		write(1,"(null)",6);
+		if (write(1,"(null)",6) == -1)
+			return (-1);
 		return (6);
 	}
 	while(s[i])
 	{
-		write(1, &s[i], 1);
+		if (write(1, &s[i], 1) == -1)
+			return (-1);
 		i++;
 	}
 	return(i);

@@ -12,7 +12,7 @@
 
 NAME	= libftprintf.a 
 HEADER	= ft_printf.h
-SRCS	= ft_printf.c ft_tipo.c ft_putstr.c ft_putchar.c ft_putnbr.c ft_putpercentage.c ft_putuns.c ft_puthex.c
+SRCS	= ft_printf.c ft_tipo.c ft_putstr.c ft_putchar.c ft_putnbr.c ft_putpercentage.c ft_putuns.c ft_puthex_maius.c ft_puthex.c 
 OBJS	= $(SRCS:.c=.o) 
 DEPS	= $(SRCS:.c=.d)
 CC		= gcc
@@ -22,7 +22,7 @@ AR		= ar crs # create, replace, add and index indice all'archvio (senza doverlo 
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) # libft.a #crea esecutable
+	#$(CC) $(CFLAGS) $(OBJS) # libft.a #crea esecutable
 
 all: $(NAME) #compila il programma
 
