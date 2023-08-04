@@ -6,7 +6,7 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 17:17:04 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/07/22 17:18:52 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/08/04 16:05:59 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 int	ft_putchar(char c)
 {
-	int i = 0;
-	i = write(1, &c, 1);
+	int	i;
+
+	i = 0;
+	i = write (1, &c, 1);
 	if (i == -1)
 		return (-1);
-	return(i);
+	return (i);
 }

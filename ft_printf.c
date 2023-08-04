@@ -6,52 +6,39 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 17:59:03 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/07/25 16:59:07 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/08/04 17:04:29 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h" 
 
-int	ft_printf(char const *str, ...) //restituisce un int, -1 se errore
+int	ft_printf(char const *str, ...)
 {
-	va_list args; //where our arguments are gonna be stored
-	int counter;
-	int i;
-	int num;
+	va_list	args; 
+	int		counter;
+	int		i;
+	int		num;
 
-	if(str == NULL)
+	if (str == NULL)
 		return (0);
-
 	counter = 0;
 	i = 0;
-
-	va_start(args, str); //to inicialize the list  (list+1 parameter of the function)
-	while(str[i])
+	va_start(args, str); 
+	while (str[i])
 	{
-		if(str[i] == '%')
-		{
-			num = ft_tipo(str[i+1], args);
-			if (num == -1)
-				return (-1);
-			else {
-				counter += num;
-			//counter += ft_tipo(str[i+1], args);
-		//if (counter == -1)
-			//return (-1);
-			i++;
-			}
-		}
+		if (str[i] == '%')
+			num = ft_tipo (str[++i], args);
 		else
-		{
-			counter += write(1, &str[i], 1);
-			if (counter == -1)
-				return (-1);
-		}
+			num = write(1, &str[i], 1);
+		if (num  == -1)
+			return (-1);
+		counter += num;
 		i++;
 	}
-	va_end(args);
-	return(counter);
+	va_end (args);
+	return (counter);
 }
+
 /*
 int main()
 {
@@ -76,5 +63,3 @@ int main()
 
 }
 */
-
-

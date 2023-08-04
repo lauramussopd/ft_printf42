@@ -6,19 +6,19 @@
 /*   By: laurmuss <laurmuss@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 16:02:35 by laurmuss          #+#    #+#             */
-/*   Updated: 2023/07/25 18:06:02 by laurmuss         ###   ########.fr       */
+/*   Updated: 2023/08/04 16:26:12 by laurmuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
 
-int ft_count_digits(int b)
+int	ft_count_digits(int b)
 {
 	int			res;
 	long int	num;
 
 	num = (long int)b;
 	res = 0;
-	if(b == 0)
+	if (b == 0)
 		return (1);
 	if (b < 0)
 	{
@@ -33,7 +33,7 @@ int ft_count_digits(int b)
 	return (res);
 }
 
-int		ft_putnbr(int n)
+int	ft_putnbr(int n)
 {
 	unsigned int	num;
 	int				rtn;
@@ -42,15 +42,21 @@ int		ft_putnbr(int n)
 	num = n;
 	if (n < 0)
 	{
-		ft_putchar('-');
+		if (ft_putchar('-') == -1)
+			return (-1);
 		num = -n;
 	}
 	if (num < 10)
-		ft_putchar(num + '0');
+	{
+		if (ft_putchar(num + '0') == -1)
+			return (-1);
+	}
 	else
 	{
-		ft_putnbr(num / 10);
-		ft_putnbr(num % 10);
+		if (ft_putnbr(num / 10) == -1)
+			return (-1);
+		if (ft_putnbr(num % 10) == -1)
+			return (-1);
 	}
 	return (rtn);
 }
